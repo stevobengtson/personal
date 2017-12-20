@@ -181,12 +181,6 @@ export class ResumeComponent {
     { name: 'SVG', url: 'http://www.w3.org/Graphics/SVG/' }
   ];
 
-  socialNetworks = [
-    { name: 'LinkedIn', icon: 'linkedin', url: 'https://www.linkedin.com/in/stevenbengtson/' },
-    { name: 'BitBucket', icon: 'bitbucket', url: 'https://bitbucket.org/sbengtson/' },
-    { name: 'GitHub', icon: 'github', url: 'https://github.com/stevobengtson' }
-  ];
-
   allSkills(): string[] {
     return this.experiences.reduceRight(
       (previousValue, currentValue) => previousValue.concat(currentValue.skills),

@@ -6,15 +6,7 @@
   </blockquote>
 
   <div class="row">
-    <div class="col-md-6">
-      <a *ngFor="let socialNetwork of socialNetworks"
-        class="btn btn-social-icon btn-{{ socialNetwork.icon }} social-button"
-        href="{{ socialNetwork.url }}"
-        title="{{ socialNetwork.name }}">
-        <span class="fa fa-{{ socialNetwork.icon }}"></span>
-      </a>
-    </div>
-    <div class="col-md-6 pull-right">
+    <div class="col-md-12 pull-right">
       <div class="pull-right">
         <a href="/assets/resume.pdf" title="Download PDF version"><span class="fa fa-2x fa-file-pdf-o"></span></a>
       </div>
