@@ -5,16 +5,11 @@ services:
     build: ./nginx
     ports:
       - "80:80"
-    links:
-      - web
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
 
   web:
     build: .
-    ports:
-      - "4200:4200"
-    command: npm start
     environment:
       - PORT=4200
       - VIRTUAL_HOST=personal.localhost

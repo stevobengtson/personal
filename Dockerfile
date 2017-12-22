@@ -8,7 +8,8 @@ COPY package.json /app
 
 RUN npm install
 
-COPY . /app
+# COPY . /app
+WORKDIR /app
 
 EXPOSE 4200
 
