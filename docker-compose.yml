@@ -1,18 +1,12 @@
 version: '2'
 
 services:
-  nginx:
-    build: ./nginx
-    ports:
-      - "80:80"
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-
   web:
     build: .
+    ports:
+      - "4200:4200"
     environment:
       - PORT=4200
-      - VIRTUAL_HOST=personal.localhost
     volumes:
       - .:/app
 
