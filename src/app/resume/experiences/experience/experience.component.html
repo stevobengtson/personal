@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-body">
+    <blockquote class="blockquote">
+      <p class="mb-0">{{ experience.companyName }} - <a href="{{ experience.companyUrl.src }}" class="card-link">{{ experience.companyUrl.title }}</a></p>
+      <footer class="blockquote-footer">{{ experience.position }} <cite title="Source Title">{{ experience.startDate }} to {{ experience.endDate }}</cite></footer>
+    </blockquote>
+    <p class="card-text">{{ experience.summary }}</p>
+    <p>
+      <app-skill *ngFor="let skill of experience.skills; let i = index" [skillName]="skill" [skillColour]="skillColour(i)"></app-skill>
+    </p>
+  </div>
+</div>

@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+
 import { ResumeComponent } from './resume.component';
+import { SkillsComponent } from './skills/skills.component';
+import { SkillComponent } from './skills/skill/skill.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
+import { ExperienceComponent } from './experiences/experience/experience.component';
 
 describe('ResumeComponent', () => {
   let component: ResumeComponent;
@@ -8,7 +13,13 @@ describe('ResumeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResumeComponent ],
+      declarations: [
+        ResumeComponent,
+        SkillsComponent,
+        SkillComponent,
+        ExperiencesComponent,
+        ExperienceComponent
+      ],
       imports: [ RouterTestingModule ]
     })
     .compileComponents();
