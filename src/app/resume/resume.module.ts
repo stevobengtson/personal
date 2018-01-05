@@ -8,6 +8,8 @@ import { SkillComponent } from './skills/skill/skill.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { ExperienceComponent } from './experiences/experience/experience.component';
 
+import { ResumeService } from './resume.service';
+
 @NgModule({
   declarations: [
     ResumeComponent,
@@ -21,6 +23,9 @@ import { ExperienceComponent } from './experiences/experience/experience.compone
     RouterModule.forChild([
       { path: '', component: ResumeComponent, pathMatch: 'full' }
     ])
+  ],
+  providers: [
+    ResumeService
   ]
 })
 export class ResumeModule {}

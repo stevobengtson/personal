@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Skill } from '../../resume.service';
 
 @Component({
   selector: 'app-skill',
@@ -6,7 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./skill.component.css']
 })
 export class SkillComponent {
-  @Input() skillName: string;
-  @Input() skillUrl: string;
-  @Input() skillColour: string;
+  @Input() type = 'list-item';
+  @Input() skill: Skill;
 }
