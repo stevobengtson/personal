@@ -1,0 +1,8 @@
+<a *ngIf="type == 'list-item'"
+   class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+   href="{{ skill?.url }}"
+   data-id="{{ skill?.id }}">
+  {{ skill?.name }}
+  <span class="badge badge-secondary">{{ skill?.url }}</span>
+</a>
+<button *ngIf="type == 'button'" data-id="{{ skill.id }}" class="btn btn-{{ skill.colour }}">{{ skill.name }}</button>

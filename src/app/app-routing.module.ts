@@ -6,7 +6,7 @@ import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/resume', pathMatch: 'full' },
-  { path: 'resume', component: ResumeComponent }
+  { path: 'resume', loadChildren: 'app/resume/resume.module#ResumeModule' }
 ];
 
 @NgModule({
