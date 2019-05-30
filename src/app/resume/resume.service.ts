@@ -133,7 +133,7 @@ export class ResumeService {
     {
       id: 10,
       companyName: 'Skyfire Labs',
-      companyUrl: { src: '', title: '' },
+      companyUrl: { src: 'https://en.wikipedia.org/wiki/Skyfire_(company)', title: 'skyfire.com (Defunct)' },
       position: 'Javascript Developer',
       startDate: 'June 2010',
       endDate: 'October 2010',

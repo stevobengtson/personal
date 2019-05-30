@@ -10,6 +10,12 @@ import { ResumeService, Experience, Skill } from './resume.service';
 export class ResumeComponent implements OnInit {
   experiences: Experience[];
 
+  socialNetworks = [
+    { name: 'BitBucket', icon: 'bitbucket', url: 'https://bitbucket.org/sbengtson/' },
+    { name: 'GitHub', icon: 'github', url: 'https://github.com/stevobengtson' },
+    { name: 'Facebook', icon: 'facebook', url: 'https://www.facebook.com/steven.bengtson' }
+  ];
+
   constructor(private resumeService: ResumeService) {}
 
   ngOnInit() {

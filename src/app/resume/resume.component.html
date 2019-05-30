@@ -1,46 +1,48 @@
-<div class="container">
-  <h1 class="display-3 text-center">Steven "Stevo" Bengtson</h1>
-  <blockquote class="blockquote text-right">
-    <p class="mb-0">Victoria, British Columbia, Canada.</p>
-    <footer class="blockquote-footer"><img src="/assets/email.png" width="160" height="16"></footer>
-  </blockquote>
-
-  <div class="row">
-    <div class="col-md-12 pull-right">
-      <div class="pull-right">
-        <a href="/assets/resume.pdf" title="Download PDF version"><span class="fa fa-2x fa-file-pdf-o"></span></a>
-      </div>
-    </div>
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="display-3 text-center">Steven "Stevo" Bengtson</h1>
+    <blockquote class="blockquote text-right">
+      <p class="mb-0">Victoria, British Columbia, Canada.</p>
+      <footer class="blockquote-footer"><img src="/assets/email.png" width="160" height="16"></footer>
+    </blockquote>
   </div>
-
-  <br><br>
-
-  <p class="lead"><strong>Goals:</strong> Maintain proper software development procedures and produce clean efficient code.</p>
-  <p class="lead"><strong>Specialties:</strong> Senior software development skills, Mozilla toolkit development (Netscape 8.0/8.1, Flock, Songbird), object oriented development, and web based applications (Ruby on Rails, HTML, ASP, PHP, Angular, JavaScript, MySQL, Postgres).</p>
-  <p class="lead"><strong>Operating Systems:</strong> macOS (up to High Sierra), Windows (3.1 to 10), Linux (Ubuntu, Debian, Gentoo, Mint)</p>
-
-  <h1>Experience</h1>
-  <app-experiences [experiences]="experiences"></app-experiences>
-
-  <h1>Education</h1>
-  <div class="card">
-    <div class="card-body">
-      <blockquote class="blockquote">
-        <p class="mb-0">Camosun College</p>
-        <footer class="blockquote-footer">Diploma in Computer Systems Technology, Computer Systems Technician <cite title="Source Title">1997 to 2000</cite></footer>
-      </blockquote>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <blockquote class="blockquote">
-        <p class="mb-0">Athabasca University</p>
-        <footer class="blockquote-footer">Bachelor of Applied Science (B.A.Sc.), Computer Science <cite title="Source Title">2015</cite></footer>
-      </blockquote>
-    </div>
-  </div>
-
-  <h1>Skills</h1>
-  <app-skills [allSkills]="allSkills()"></app-skills>
 </div>
-<br><br>
+
+<div class="row">
+  <div class="col-md-12 pull-right">
+    <div class="pull-right">
+      <a class="btn" href="/assets/resume.pdf" title="Download PDF version"><span
+          class="fa fa-2x fa-file-pdf-o"></span></a>
+      <span *ngFor="let socialNetwork of socialNetworks">
+        <a class="btn btn-social-icon btn-{{ socialNetwork.icon }}" href="{{ socialNetwork.url }}"
+          title="{{ socialNetwork.name }}">
+          <span class="fa fa-{{ socialNetwork.icon }}"></span>
+        </a>&nbsp;
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2>Sr. Software Developer seeking new opportunities.</h2>
+    <hr>
+  </div>
+</div>
+
+<h3>Experience</h3>
+<app-experiences [experiences]="experiences"></app-experiences>
+
+<h3>Education</h3>
+<div class="card">
+  <div class="card-body">
+    <blockquote class="blockquote">
+      <p class="mb-0">Camosun College</p>
+      <footer class="blockquote-footer">Diploma in Computer Systems Technology, Computer Systems Technician <cite
+          title="Source Title">1997 to 2000</cite></footer>
+    </blockquote>
+  </div>
+</div>
+
+<h3>Skills</h3>
+<app-skills [allSkills]="allSkills()"></app-skills>
