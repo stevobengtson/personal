@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 
 export interface Experience {
   id?: number;
@@ -226,7 +225,7 @@ export class ResumeService {
     return this.experiences.reduceRight(
       (previousValue, currentValue) => previousValue.concat(currentValue.skills),
       []
-    ).sort().filter(function(item, pos, ary) {
+    ).sort().filter((item, pos, ary) => {
       return !pos || item !== ary[pos - 1];
     }).map((skillName) => {
       return this.getSkillByName(skillName);
@@ -236,7 +235,7 @@ export class ResumeService {
   getSkillByName(name: string): Skill {
     let foundSkill: Skill = this.skills.find((skill) => skill.name.toLowerCase() === name.toLowerCase());
     if (!foundSkill) {
-      foundSkill = <Skill>{ name: name };
+      foundSkill =  { name } as Skill;
     }
     return foundSkill;
   }
